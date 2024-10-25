@@ -182,7 +182,7 @@ map: bookTexture,
 
         // adding texture to book
         const bookTexture = new THREE.TextureLoader().load(
-          'textures/book-inner.jpg'
+          'textures/inner-book.jpg'
         );
         bookTexture.flipY = false;
         child.material = new THREE.MeshStandardMaterial({

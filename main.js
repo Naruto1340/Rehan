@@ -143,7 +143,7 @@ gltfLoader.load(
       room. scene. children.forEach ((child) →> {
 if (child. name === 'Book001') {
 const bookTexture = new
-THREE. TextureLoader(). load ('public/ textures/inner-book.jpg');
+THREE. TextureLoader(). load ('textures/inner-book.jpg');
 child material = new
 THREE.MeshStandardMaterial(‹
 map: bookTexture,

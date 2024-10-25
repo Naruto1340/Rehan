@@ -180,14 +180,14 @@ gltfLoader.load(
         child.children[1].material.opacity = 0.8;
         child.children[1].material.depthWrite = false;
         child.children[1].material.depthTest = false;
-      }
+     }
 
       if (child.name === 'Book') {
         bookCover = child.children[0];
 
         // adding texture to book
         const bookTexture = new THREE.TextureLoader().load(
-          'textures/inner-book.jpg'
+          'textures/book-inner.jpg'
         );
         bookTexture.flipY = false;
         child.material = new THREE.MeshStandardMaterial({

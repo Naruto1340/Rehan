@@ -140,15 +140,20 @@ gltfLoader.load(
 
     room.scene.children.forEach((child) => {
       // disable shadow by wall
-      room. scene. children.forEach ((child) →> {
-if (child. name === 'Book001') {
-const bookTexture = new
-THREE. TextureLoader(). load ('textures/inner-book.jpg');
-child material = new
-THREE.MeshStandardMaterial(‹
-map: bookTexture,
-}) ;
-})
+      if (child.name !== 'Wall') {
+        child.castShadow = true;
+      }
+      child.receiveShadow = true;
+
+      if (child.children) {
+        child.children.forEach((innerChild) => {
+          // disable shadow by book cover & switch btn
+          if (innerChild.name !== 'Book001' && innerChild.name !== 'Switch') {
+            innerChild.castShadow = true;
+          }
+          innerChild.receiveShadow = true;
+        });
+      }
 
       if (child.name === 'Stand') {
         child.children[0].material = new THREE.MeshBasicMaterial({
@@ -156,7 +161,7 @@ map: bookTexture,
         });
         video.play();
       }
-
+      
       // transparent texture for glass
       if (child.name === 'CPU') {
         child.children[0].material = new THREE.MeshPhysicalMaterial();

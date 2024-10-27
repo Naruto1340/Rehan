@@ -781,3 +781,10 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+window.onload = function() {
+    const audio = new Audio('assets/music.mp3');
+    audio.loop = true; // Loop the audio
+    audio.play(); // Play the audio automatically
+};
+

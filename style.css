@@ -405,24 +405,3 @@ footer {
     transform: scale(1.2, 1);
   }
 }
-body {
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* Full height of the viewport */
-    position: relative; /* Position relative for absolute positioning of the button */
-}
-
-.btn-gradient-20 {
-    position: absolute; /* Use absolute positioning */
-    bottom: 20px; /* Distance from the bottom */
-    left: 20px; /* Distance from the left */
-    cursor: pointer;
-    outline: none;
-    font-size: 16px;
-    background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-    padding: 0.7em 2em;
-    border-radius: 65px;
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
-    transition: box-shadow 0.25s;
-    color: white;
-}
-
